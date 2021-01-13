@@ -1476,3 +1476,188 @@ Ustawienie nie działa na linie już wcześniej wyświetlone.
 Dostępne wartości:
 * `true` - włączone
 * `false` - wyłączone
+
+
+## `scripts.ui.auto_wrap_main_window.enabled`
+
+Długość linii (miejsce jej łamania dokładniej mówiąc) w głównym oknie będzie zależna od jego szerokości.
+Ustawienie szczególnie użyteczne dla osób przerzucających okno na rózne wielkościowo monitory. 
+Ustawienie nie działa na linie już wcześniej wyświetlone.
+
+Dostępne wartości:
+* `true` - włączone
+* `false` - wyłączone
+
+## `scripts.character.state_reporting.<cecha>.<wartosc_liczbowa>`
+
+Ustawia komendy które mają być wysyłane przy meldowaniu stanu postaci. 
+
+Niektóre statystyki postaci nie są widoczne z zewnątrz - np. poziom zmęczenia, obciązenia, głodu, 
+pragnienia, upicie czy many. Aby ułatwić przekazywanie tych wartości innym graczom została dodana komenda
+`/zamelduj <co>` która uruchamia skonfigurawaną komendę mającą poinformować innych o stanie twojej postaci. 
+
+Przykładowo:
+
+```
+> /zamelduj zmeczenie
+Mowisz: Troche zmeczony.
+```
+
+lub w skróconej formie:
+
+```
+> /zamzme
+Mowisz: Troche zmeczony.
+```
+
+Bieżąca wartość stystyki brana jest z automatycznie z GMCP. Dozwolone wartosci ustawienia to lista komend do wykonania. 
+Za każdym kolejnym wywołaniem wysyłana jest kolejna komenda z tej listy. Jeżeli chcesz wysłać dwie lub więcej komend
+na raz musisz podać je jako jedną wartość i oddzielić znakiem separatora komend.
+
+Przykładowo dla konfiguracji:
+
+```json
+"scripts.character.state_reporting.fatigue.options_male.0": [
+    "usmiechnij sie dumnie;'W pelni wypoczety.", 
+    "machnij reka lekko;'W pelni sil."
+],
+```
+
+użycie będzie wyglądało następująco:
+
+```
+/zamzme
+Usmiechasz sie dumnie.
+Mowisz: W pelni wypoczety.
+
+/zamzme
+Machasz reka lekko.
+Mowisz: W pelni sil.
+
+/zamzme
+Usmiechasz sie dumnie.
+Mowisz: W pelni wypoczety.
+```
+
+Ustawienia przyjmują wartości w formie męskiej i żeńskiej. Używana jest tylko wartość pasująca do płci
+twojej postaci.
+
+### Przykład: zmęcznie (Komenda `/zamelduj zmeczenie` lub `/zamzme`):
+
+```
+"scripts.character.state_reporting.fatigue.options_male.0": ["'W pelni wypoczety.", "'W pelni sil."],
+"scripts.character.state_reporting.fatigue.options_male.1": ["'Wypoczety."],
+"scripts.character.state_reporting.fatigue.options_male.2": ["'Troche zmeczony."],
+"scripts.character.state_reporting.fatigue.options_male.3": ["'Zmeczony."],
+"scripts.character.state_reporting.fatigue.options_male.4": ["'Bardzo zmeczony."],
+"scripts.character.state_reporting.fatigue.options_male.5": ["'Nieco wyczerpany."],
+"scripts.character.state_reporting.fatigue.options_male.6": ["'Wyczerpany."],
+"scripts.character.state_reporting.fatigue.options_male.7": ["'Bardzo wyczerpany."],
+"scripts.character.state_reporting.fatigue.options_male.8": ["'Wycienczony."],
+"scripts.character.state_reporting.fatigue.options_male.9": ["'Calkowicie wycienczony."],
+"scripts.character.state_reporting.fatigue.options_female.0": ["'W pelni wypoczeta.", "'W pelni sil."],
+"scripts.character.state_reporting.fatigue.options_female.1": ["'Wypoczeta."],
+"scripts.character.state_reporting.fatigue.options_female.2": ["'Troche zmeczona."],
+"scripts.character.state_reporting.fatigue.options_female.3": ["'Zmeczona."],
+"scripts.character.state_reporting.fatigue.options_female.4": ["'Bardzo zmeczona."],
+"scripts.character.state_reporting.fatigue.options_female.5": ["'Nieco wyczerpana."],
+"scripts.character.state_reporting.fatigue.options_female.6": ["'Wyczerpana"],
+"scripts.character.state_reporting.fatigue.options_female.7": ["'Bardzo wyczerpana."],
+"scripts.character.state_reporting.fatigue.options_female.8": ["'Wycienczona."],
+"scripts.character.state_reporting.fatigue.options_female.9": ["'Calkowicie wycienczona."],
+```
+
+### Przykład: obciążenie (Komenda `/zamelduj obciazenie` lub `/zamobc`):
+
+```
+"scripts.character.state_reporting.encumbrance.options_male.0": ["'Brak obciazenia"],
+"scripts.character.state_reporting.encumbrance.options_male.1": ["'Wadzi mi troche."],
+"scripts.character.state_reporting.encumbrance.options_male.2": ["'Daje mi sie we znaki."],
+"scripts.character.state_reporting.encumbrance.options_male.3": ["'Ekwipunek jest dosc klopotliwy."],
+"scripts.character.state_reporting.encumbrance.options_male.4": ["'Ekwipunek jest wyjatkowo ciezki."],
+"scripts.character.state_reporting.encumbrance.options_male.5": ["'Ekwipunek jest niemilosiernie ciezki"],
+"scripts.character.state_reporting.encumbrance.options_male.6": ["'Ekwipunek przygniata mnie do ziemi."],
+"scripts.character.state_reporting.encumbrance.options_female.0": ["'Brak obciazenia"],
+"scripts.character.state_reporting.encumbrance.options_female.1": ["'Wadzi mi troche."],
+"scripts.character.state_reporting.encumbrance.options_female.2": ["'Daje mi sie we znaki."],
+"scripts.character.state_reporting.encumbrance.options_female.3": ["'Ekwipunek jest dosc klopotliwy."],
+"scripts.character.state_reporting.encumbrance.options_female.4": ["'Ekwipunek jest wyjatkowo ciezki."],
+"scripts.character.state_reporting.encumbrance.options_female.5": ["'Ekwipunek jest niemilosiernie ciezki"],
+"scripts.character.state_reporting.encumbrance.options_female.6": ["'Ekwipunek przygniata mnie do ziemi."],
+```
+
+### Przykład: głód (Komenda `/zamelduj glod` lub `/zamglo`):
+
+```
+"scripts.character.state_reporting.stuffed.options_male.0": ["'Bardzo glodny"],
+"scripts.character.state_reporting.stuffed.options_male.1": ["'Glodny."],
+"scripts.character.state_reporting.stuffed.options_male.2": ["'Najedzony."],
+"scripts.character.state_reporting.stuffed.options_male.3": ["'Bardzo najedzony."],
+"scripts.character.state_reporting.stuffed.options_female.0": ["'Bardzo glodna"],
+"scripts.character.state_reporting.stuffed.options_female.1": ["'Glodna."],
+"scripts.character.state_reporting.stuffed.options_female.2": ["'Najedzona."],
+"scripts.character.state_reporting.stuffed.options_female.3": ["'Bardzo najedzona."],
+```
+
+### Przykład: głód (Komenda `/zamelduj pragnienie` lub `/zampra`):
+
+```
+"scripts.character.state_reporting.soaked.options_male.0": ["'Bardzo chce mi sie pic", "'Bardzo spragniony"],
+"scripts.character.state_reporting.soaked.options_male.1": ["'Chce mi sie pic.", "'Spragniony"],
+"scripts.character.state_reporting.soaked.options_male.2": ["'Troche chce mi sie pic.", "'Troche spragniony"],
+"scripts.character.state_reporting.soaked.options_male.3": ["'Nie chce mi sie pic."],
+"scripts.character.state_reporting.soaked.options_female.0": ["'Bardzo chce mi sie pic", "'Bardzo spragniona"],
+"scripts.character.state_reporting.soaked.options_female.1": ["'Chce mi sie pic.", "'Spragniona"],
+"scripts.character.state_reporting.soaked.options_female.2": ["'Troche chce mi sie pic.", "'Troche spragniona"],
+"scripts.character.state_reporting.soaked.options_female.3": ["'Nie chce mi sie pic."],
+```
+
+### Przykład: głód (Komenda `/zamelduj upicie` lub `/zamupi`):
+
+```
+"scripts.character.state_reporting.intox.options_male.0": ["'Trzezwy"],
+"scripts.character.state_reporting.intox.options_male.1": ["'Pochmielony."],
+"scripts.character.state_reporting.intox.options_male.2": ["'Lekko podpity."],
+"scripts.character.state_reporting.intox.options_male.3": ["'Podpity."],
+"scripts.character.state_reporting.intox.options_male.4": ["'Wstawiony."],
+"scripts.character.state_reporting.intox.options_male.5": ["'Mocno wstawiony."],
+"scripts.character.state_reporting.intox.options_male.6": ["'Pijany."],
+"scripts.character.state_reporting.intox.options_male.7": ["'Schlany."],
+"scripts.character.state_reporting.intox.options_male.8": ["'Napruty."],
+"scripts.character.state_reporting.intox.options_male.9": ["'Nawalony."],
+"scripts.character.state_reporting.intox.options_male.10": ["'Pijany jak bela."],
+"scripts.character.state_reporting.intox.options_female.0": ["'Trzezwa"],
+"scripts.character.state_reporting.intox.options_female.1": ["'Pochmielona."],
+"scripts.character.state_reporting.intox.options_female.2": ["'Lekko podpita."],
+"scripts.character.state_reporting.intox.options_female.3": ["'Podpita."],
+"scripts.character.state_reporting.intox.options_female.4": ["'Wstawiona."],
+"scripts.character.state_reporting.intox.options_female.5": ["'Mocno wstawiona."],
+"scripts.character.state_reporting.intox.options_female.6": ["'Pijana."],
+"scripts.character.state_reporting.intox.options_female.7": ["'Schlana."],
+"scripts.character.state_reporting.intox.options_female.8": ["'Napruta."],
+"scripts.character.state_reporting.intox.options_female.9": ["'Nawalona."],
+"scripts.character.state_reporting.intox.options_female.10": ["'Pijana jak bela."],
+```
+
+### Przykład: głód (Komenda `/zamelduj mane` lub `/zamman`):
+
+```
+"scripts.character.state_reporting.mana.options_male.0": ["'Jestem u kresu sil mentalnych"],
+"scripts.character.state_reporting.mana.options_male.1": ["'Jestem wykonczony mentalnie."],
+"scripts.character.state_reporting.mana.options_male.2": ["'Jestem wyczerpana mentalnie."],
+"scripts.character.state_reporting.mana.options_male.3": ["'Jestem w zlej kondycji mentalnej."],
+"scripts.character.state_reporting.mana.options_male.4": ["'Jestem bardzo zmeczony mentalnie."],
+"scripts.character.state_reporting.mana.options_male.5": ["'Jestem zmeczony mentalnie."],
+"scripts.character.state_reporting.mana.options_male.6": ["'Jestem oslabiony mentalnie."],
+"scripts.character.state_reporting.mana.options_male.7": ["'Jestem lekko oslabony mentalnie."],
+"scripts.character.state_reporting.mana.options_male.8": ["'Jestem w pelni sil mentalnych."],
+"scripts.character.state_reporting.mana.options_female.0": ["'Jestem u kresu sil mentalnych"],
+"scripts.character.state_reporting.mana.options_female.1": ["'Jestem wykonczona mentalnie."],
+"scripts.character.state_reporting.mana.options_female.2": ["'Jestem wyczerpana mentalnie."],
+"scripts.character.state_reporting.mana.options_female.3": ["'Jestem w zlej kondycji mentalnej."],
+"scripts.character.state_reporting.mana.options_female.4": ["'Jestem bardzo zmeczona mentalnie."],
+"scripts.character.state_reporting.mana.options_female.5": ["'Jestem zmeczona mentalnie."],
+"scripts.character.state_reporting.mana.options_female.6": ["'Jestem oslabiona mentalnie."],
+"scripts.character.state_reporting.mana.options_female.7": ["'Jestem lekko oslabona mentalnie."],
+"scripts.character.state_reporting.mana.options_female.8": ["'Jestem w pelni sil mentalnych."],
+```

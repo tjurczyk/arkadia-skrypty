@@ -24528,6 +24528,55 @@
 					<packageName></packageName>
 					<regex>^/staz ?(.*)</regex>
 				</Alias>
+				<AliasGroup isActive="yes" isFolder="yes">
+					<name>/zamelduj</name>
+					<script></script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/zam</regex>
+					<Alias isActive="yes" isFolder="no">
+						<name>mane</name>
+						<script>alias_func_skrypty_character_state_reporting_mana()</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^/zam(?:elduj )?man(?:e)?$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>obciazenie</name>
+						<script>alias_func_skrypty_character_state_reporting_encumbrance()</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^/zam(?:elduj )?obc(?:iazenie)?$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>pragnienie</name>
+						<script>alias_func_skrypty_character_state_reporting_soaked()</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^/zam(?:elduj )?pra(?:gnienie)?$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>upicie</name>
+						<script>alias_func_skrypty_character_state_reporting_intox()</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^/zam(?:elduj )?upi(?:cie)?$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>glod</name>
+						<script>alias_func_skrypty_character_state_reporting_stuffed()</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^/zam(?:elduj )?glo(?:d)?$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>zmeczenie</name>
+						<script>alias_func_skrypty_character_state_reporting_fatigue()</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^/zam(?:elduj )?zme(?:czenie)?$</regex>
+					</Alias>
+				</AliasGroup>
 			</AliasGroup>
 			<AliasGroup isActive="yes" isFolder="yes">
 				<name>mail</name>
