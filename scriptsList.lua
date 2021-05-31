@@ -362,6 +362,7 @@ return {
     "skrypty/ui/gags/color/color_innych_spece/sprzet",
     "skrypty/ui/gags/color/magics/mister",
     "skrypty/ui/gags/color/magics/opal",
+    "skrypty/ui/gags/color/magics/archaiczny",
     "mapper/localizers/ships_buses/ships/kreutz-nuln-kz-bw/kapitan_czarnowlosy_barczysty",
     "skrypty/ui/gags/color/color_moje_spece/leg/ja_spec",
     "skrypty/ui/gags/color/color_moje_spece/mie/ja_spec_obszar",
