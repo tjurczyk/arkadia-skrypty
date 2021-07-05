@@ -17,7 +17,7 @@ function AutomaticTable:new(even_columns, skip_separators, center_columns)
     o.padding = 5
     o.even_columns = even_columns
     o.skip_separators = skip_separators
-    o.center_columns = center_columns
+    o.center_columns = center_columns or {}
     return o
 end
 
