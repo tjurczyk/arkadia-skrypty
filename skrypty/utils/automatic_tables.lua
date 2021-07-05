@@ -6,7 +6,7 @@ function AutomaticTable.color_transformer(color)
     end
 end
 
-function AutomaticTable:new(even_columns)
+function AutomaticTable:new(even_columns, skip_separators, center_columns)
     local o = {}
     setmetatable(o, self)
     self.__index = self
@@ -16,6 +16,8 @@ function AutomaticTable:new(even_columns)
     o.title = false
     o.padding = 5
     o.even_columns = even_columns
+    o.skip_separators = skip_separators
+    o.center_columns = center_columns
     return o
 end
 
@@ -82,7 +84,9 @@ function AutomaticTable:print()
     for index, width in pairs(self.columns) do
         self.width = self.width + width + self.padding * 2 + 1
     end
-    self.width = math.max(self.width, scripts.utils.real_len(self.title) + self.padding * 2 + 1)
+    if self.title then
+        self.width = math.max(self.width, scripts.utils.real_len(self.title) + self.padding * 2 + 1)
+    end
     echo("\n")
     self:print_title()
     self:print_header()
@@ -93,11 +97,11 @@ end
 function AutomaticTable:print_title()
     if self.title then
         self:print_border(true)
+        cecho("|")
+        cecho(scripts.utils.str_pad(self.title, self.width - 2, "center"))
+        cecho("|")
+        cecho("\n")
     end
-    cecho("|")
-    cecho(scripts.utils.str_pad(self.title, self.width - 2, "center"))
-    cecho("|")
-    cecho("\n")
 end
 
 function AutomaticTable:print_header()
@@ -115,7 +119,9 @@ end
 function AutomaticTable:print_data()
     for row, elements in ipairs(self.data) do
         if row ~= 1 then
-            self:print_separator()
+            if not self.skip_separators then
+                self:print_separator()
+            end
         end
         self:print_table_line(elements)
     end
@@ -154,6 +160,7 @@ function AutomaticTable:print_table_line(elements, center)
     for i = 1, rows do
         cecho("|")
         for index, value in ipairs(elements) do
+            center = table.index_of(self.center_columns, index) and "center" or center
             self:do_print_line(value[i] or "", self.columns[index], center)
         end
         cecho("\n")
