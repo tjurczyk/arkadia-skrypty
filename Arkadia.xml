@@ -27393,13 +27393,6 @@
 				<regex>^/pokaz_kolory$</regex>
 			</Alias>
 			<Alias isActive="yes" isFolder="no">
-				<name>idz_do</name>
-				<script>alias_func_mapper_idz_do()</script>
-				<command></command>
-				<packageName></packageName>
-				<regex>^/idzdo$</regex>
-			</Alias>
-			<Alias isActive="yes" isFolder="no">
 				<name>idz_do_id</name>
 				<script>alias_func_mapper_idz_do_id()</script>
 				<command></command>

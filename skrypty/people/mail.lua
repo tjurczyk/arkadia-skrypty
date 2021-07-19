@@ -37,10 +37,7 @@ function scripts.people.mail:check_package_person(name)
     local results = db:fetch(scripts.people.db.people, db:like(scripts.people.db.people.title, "%" .. lowered_name .. "%"))
 
     if amap and table.size(results) == 1 and results[1]["room_id"] ~= -1 then
-        -- if hit, set a bind for '/idzdo' and print a msg
-        amap.go_to_room_mail = results[1]["room_id"]
-        amap:print_log("Mam ta osobe w bazie, '/idzdo' zeby tam isc", true)
-        tempTimer(30, function() amap.go_to_room_mail = nil end)
+        amap:print_log("Mam ta osobe w bazie.", true)
         return true
     end
 

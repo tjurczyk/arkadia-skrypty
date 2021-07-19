@@ -378,10 +378,6 @@ function alias_func_mapper_show_colors()
     amap:show_colors()
 end
 
-function alias_func_mapper_idz_do()
-    amap:go_to_mail()
-end
-
 function alias_func_mapper_idz_do_id()
     if scripts then
         scripts.people.go_to_person_location(tonumber(matches[2]), nil)
