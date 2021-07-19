@@ -20069,8 +20069,8 @@
 						<colorTriggerFgColor>#000000</colorTriggerFgColor>
 						<colorTriggerBgColor>#000000</colorTriggerBgColor>
 						<regexCodeList>
-							<string>^.*[pP]odazasz (|skradajac sie )za (.* na (.*))\.$</string>
-							<string>^Wraz z ([a-zA-Z ,]*) podazasz za (.* na (.*))\.$</string>
+							<string>^.*[pP]odazasz (|skradajac sie )za (.* na (.*))(?:,.*)?\.$</string>
+							<string>^Wraz z ([a-zA-Z ,]*) podazasz za (.* na (.*))(?:,.*)?\.$</string>
 						</regexCodeList>
 						<regexCodePropertyList>
 							<integer>1</integer>
@@ -20114,8 +20114,10 @@
 					<regexCodeList>
 						<string>^Wraz z .* pomagacie .* przeniesc .* na (.*)\.$</string>
 						<string>^Pomagasz .* przeniesc .* na (.*)\.$</string>
+						<string>.* kieruje lodz na (.*)\.</string>
 					</regexCodeList>
 					<regexCodePropertyList>
+						<integer>1</integer>
 						<integer>1</integer>
 						<integer>1</integer>
 					</regexCodePropertyList>
@@ -23898,7 +23900,7 @@
 						<string>Podaj tytul notki: </string>
 						<string>^Adresat:</string>
 						<string>Podaj tytul notki:</string>
-						<string>adefFhHmnpqrsRux.!?</string>
+						<string>^\[.*adefFhHmnqrsRux.!?</string>
 						<string>Zaczynasz szukac</string>
 						<string>^Zaczynasz rytmicznie ciagnac za dojki\.$</string>
 						<string>Zaczynasz wioslowac.</string>
@@ -23910,25 +23912,25 @@
 						<string>Wiedziony pierwotnym zewem lesnego lowcy, zwinnie przyklekasz na kolano i zaczynasz szukac sladow,starajac sie uchwycic wszystkimi zmyslami podszepty natury.</string>
 					</regexCodeList>
 					<regexCodePropertyList>
-						<integer>0</integer>
-						<integer>0</integer>
+						<integer>2</integer>
+						<integer>2</integer>
 						<integer>1</integer>
 						<integer>1</integer>
 						<integer>1</integer>
 						<integer>1</integer>
-						<integer>0</integer>
+						<integer>2</integer>
 						<integer>1</integer>
-						<integer>0</integer>
-						<integer>0</integer>
+						<integer>2</integer>
+						<integer>2</integer>
 						<integer>1</integer>
-						<integer>0</integer>
-						<integer>0</integer>
-						<integer>0</integer>
+						<integer>2</integer>
 						<integer>1</integer>
-						<integer>0</integer>
-						<integer>0</integer>
-						<integer>0</integer>
-						<integer>0</integer>
+						<integer>2</integer>
+						<integer>1</integer>
+						<integer>3</integer>
+						<integer>2</integer>
+						<integer>2</integer>
+						<integer>3</integer>
 						<integer>1</integer>
 						<integer>1</integer>
 						<integer>3</integer>
@@ -24258,26 +24260,28 @@
 						<string>Z ociaganiem podnosisz sie z wielkiego lozka.</string>
 						<string>Rozkopujesz zarosniety grob i przeszukujesz spoczywajacy w nim szkielet. Posrod spruchnialych, zniszczonych przedmiotow, udaje ci sie znalezc cos wartego uwagi.</string>
 						<string>^Po dokladnym przeszukaniu ciala stwierdzasz, ze korzystajac ze swoich umiejetnosci</string>
+						<string>Wynurzasz sie na powierzchnie.</string>
 					</regexCodeList>
 					<regexCodePropertyList>
-						<integer>0</integer>
-						<integer>0</integer>
-						<integer>0</integer>
-						<integer>1</integer>
-						<integer>1</integer>
-						<integer>1</integer>
-						<integer>3</integer>
 						<integer>3</integer>
 						<integer>3</integer>
 						<integer>3</integer>
 						<integer>1</integer>
+						<integer>1</integer>
+						<integer>1</integer>
+						<integer>3</integer>
 						<integer>3</integer>
 						<integer>3</integer>
 						<integer>3</integer>
 						<integer>1</integer>
 						<integer>3</integer>
 						<integer>3</integer>
+						<integer>3</integer>
 						<integer>1</integer>
+						<integer>3</integer>
+						<integer>3</integer>
+						<integer>1</integer>
+						<integer>3</integer>
 					</regexCodePropertyList>
 				</Trigger>
 			</TriggerGroup>
