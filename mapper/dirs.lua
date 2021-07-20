@@ -1,5 +1,5 @@
 function alias_func_mapper_dirs_w()
-    amap:keybind_pressed("west")
+    amap:keybind_pressed("west", false, true)
 end
 
 function alias_func_mapper_dirs_w_force_key()
@@ -20,7 +20,7 @@ function alias_func_mapper_dirs_sneaky_w()
 end
 
 function alias_func_mapper_dirs_e()
-    amap:keybind_pressed("east")
+    amap:keybind_pressed("east", false, true)
 end
 
 function alias_func_mapper_dirs_e_force_key()
@@ -41,7 +41,7 @@ function alias_func_mapper_dirs_sneaky_e()
 end
 
 function alias_func_mapper_dirs_n()
-    amap:keybind_pressed("north")
+    amap:keybind_pressed("north", false, true)
 end
 
 function alias_func_mapper_dirs_n_force_key()
@@ -62,7 +62,7 @@ function alias_func_mapper_dirs_sneaky_n()
 end
 
 function alias_func_mapper_dirs_s()
-    amap:keybind_pressed("south")
+    amap:keybind_pressed("south", false, true)
 end
 
 function alias_func_mapper_dirs_s_force_key()
@@ -83,7 +83,7 @@ function alias_func_mapper_dirs_sneaky_s()
 end
 
 function alias_func_mapper_dirs_sw()
-    amap:keybind_pressed("southwest")
+    amap:keybind_pressed("southwest", false, true)
 end
 
 function alias_func_mapper_dirs_sw_force_key()
@@ -104,7 +104,7 @@ function alias_func_mapper_dirs_sneaky_sw()
 end
 
 function alias_func_mapper_dirs_se()
-    amap:keybind_pressed("southeast")
+    amap:keybind_pressed("southeast", false, true)
 end
 
 function alias_func_mapper_dirs_se_force_key()
@@ -125,7 +125,7 @@ function alias_func_mapper_dirs_sneaky_se()
 end
 
 function alias_func_mapper_dirs_nw()
-    amap:keybind_pressed("northwest")
+    amap:keybind_pressed("northwest", false, true)
 end
 
 function alias_func_mapper_dirs_nw_force_key()
@@ -146,7 +146,7 @@ function alias_func_mapper_dirs_sneaky_nw()
 end
 
 function alias_func_mapper_dirs_ne()
-    amap:keybind_pressed("northeast")
+    amap:keybind_pressed("northeast", false, true)
 end
 
 function alias_func_mapper_dirs_ne_force()
@@ -167,7 +167,7 @@ function alias_func_mapper_dirs_sneaky_ne()
 end
 
 function alias_func_mapper_dirs_u()
-    amap:keybind_pressed("up")
+    amap:keybind_pressed("up", false, true)
 end
 
 function alias_func_mapper_dirs_u_force_key()
@@ -188,7 +188,7 @@ function alias_func_mapper_dirs_przemknij_u()
 end
 
 function alias_func_mapper_dirs_d()
-    amap:keybind_pressed("down")
+    amap:keybind_pressed("down", false, true)
 end
 
 function alias_func_mapper_dirs_d_force_key()

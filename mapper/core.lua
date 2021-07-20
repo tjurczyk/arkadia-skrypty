@@ -64,9 +64,9 @@ function amap:extract_gmcp()
     return tmp_loc
 end
 
-function amap:keybind_pressed(dir, force)
+function amap:keybind_pressed(dir, force, is_alias)
     if amap.mode == "off" then
-        send(amap.walk_mode_to_prefix[amap.walk_mode] .. amap.long_to_short[dir])
+        send(amap.walk_mode_to_prefix[amap.walk_mode] .. amap.long_to_short[dir], not is_alias)
         return
     end
 
@@ -83,14 +83,14 @@ function amap:keybind_pressed(dir, force)
     if amap.walker then
         amap:terminate_walker()
     end
-    amap:pre_on_key_event(force)
+    amap:pre_on_key_event(force, is_alias)
 end
 
-function amap:pre_on_key_event(force)
+function amap:pre_on_key_event(force, is_alias)
     local went_special = amap:check_room_on_direction_of(amap.curr, amap.dir_from_key, force)
     --local went_special = nil
     if not went_special and amap.long_to_short[amap.dir_from_key]then
-        send(amap.walk_mode_to_prefix[amap.walk_mode] .. amap.long_to_short[amap.dir_from_key])
+        send(amap.walk_mode_to_prefix[amap.walk_mode] .. amap.long_to_short[amap.dir_from_key], not is_alias)
         amap:on_key_event()
     else
         scripts.ui:info_hidden_update("")
