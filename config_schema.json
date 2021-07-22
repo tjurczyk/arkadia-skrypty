@@ -1694,6 +1694,7 @@
         "Control"
       ],
       "field_type": "list",
+      "content_type" : "key_modifiers",
       "macros_on_modify": [
         "_keybind"
       ]
@@ -1728,6 +1729,7 @@
         "Control"
       ],
       "field_type": "list",
+      "content_type" : "key_modifiers",
       "macros_on_modify": [
         "_keybind"
       ]
@@ -1760,6 +1762,7 @@
       "name": "scripts.keybind.configuration.functional_key.modifier",
       "default_value": [],
       "field_type": "list",
+      "content_type" : "key_modifiers",
       "macros_on_modify": [
         "_keybind"
       ]
@@ -1792,6 +1795,7 @@
       "name": "scripts.keybind.configuration.attack_bind_objs.modifier",
       "default_value": [],
       "field_type": "list",
+      "content_type" : "key_modifiers",
       "macros_on_modify": [
         "_keybind"
       ]
@@ -1828,6 +1832,7 @@
       "name": "scripts.keybind.configuration.break_attack_target.modifier",
       "default_value": [],
       "field_type": "list",
+      "content_type" : "key_modifiers",
       "macros_on_modify": [
         "_keybind"
       ]
@@ -1860,6 +1865,7 @@
       "name": "scripts.keybind.configuration.block_attack_target.modifier",
       "default_value": [],
       "field_type": "list",
+      "content_type" : "key_modifiers",
       "macros_on_modify": [
         "_keybind"
       ]
@@ -1894,6 +1900,7 @@
         "Control"
       ],
       "field_type": "list",
+      "content_type" : "key_modifiers",
       "macros_on_modify": [
         "_keybind"
       ]
@@ -1928,6 +1935,7 @@
         "Control"
       ],
       "field_type": "list",
+      "content_type" : "key_modifiers",
       "macros_on_modify": [
         "_keybind"
       ]
@@ -1960,6 +1968,7 @@
       "name": "scripts.keybind.configuration.empty_bottle.modifier",
       "default_value": [],
       "field_type": "list",
+      "content_type" : "key_modifiers",
       "macros_on_modify": [
         "_keybind"
       ]
@@ -1992,6 +2001,7 @@
       "name": "scripts.keybind.configuration.enter_ship.modifier",
       "default_value": [],
       "field_type": "list",
+      "content_type" : "key_modifiers",
       "macros_on_modify": [
         "_keybind"
       ]
@@ -2026,6 +2036,7 @@
         "Control"
       ],
       "field_type": "list",
+      "content_type" : "key_modifiers",
       "macros_on_modify": [
         "_keybind"
       ]
@@ -2060,6 +2071,7 @@
         "Control"
       ],
       "field_type": "list",
+      "content_type" : "key_modifiers",
       "macros_on_modify": [
         "_keybind"
       ]
@@ -2094,6 +2106,7 @@
         "Alt"
       ],
       "field_type": "list",
+      "content_type" : "key_modifiers",
       "macros_on_modify": [
         "_keybind"
       ]
@@ -2128,6 +2141,7 @@
         "Alt"
       ],
       "field_type": "list",
+      "content_type" : "key_modifiers",
       "macros_on_modify": [
         "_keybind"
       ]
@@ -2160,6 +2174,7 @@
       "name": "scripts.keybind.configuration.temp5.modifier",
       "default_value": [],
       "field_type": "list",
+      "content_type" : "key_modifiers",
       "macros_on_modify": [
         "_keybind"
       ]
@@ -2192,6 +2207,7 @@
       "name": "scripts.keybind.configuration.temp6.modifier",
       "default_value": [],
       "field_type": "list",
+      "content_type" : "key_modifiers",
       "macros_on_modify": [
         "_keybind"
       ]
@@ -2224,6 +2240,7 @@
       "name": "scripts.keybind.configuration.temp7.modifier",
       "default_value": [],
       "field_type": "list",
+      "content_type" : "key_modifiers",
       "macros_on_modify": [
         "_keybind"
       ]
@@ -2256,6 +2273,7 @@
       "name": "scripts.keybind.configuration.temp8.modifier",
       "default_value": [],
       "field_type": "list",
+      "content_type" : "key_modifiers",
       "macros_on_modify": [
         "_keybind"
       ]
@@ -2288,6 +2306,7 @@
       "name": "scripts.keybind.configuration.temp9.modifier",
       "default_value": [],
       "field_type": "list",
+      "content_type" : "key_modifiers",
       "macros_on_modify": [
         "_keybind"
       ]
@@ -2320,6 +2339,7 @@
       "name": "scripts.keybind.configuration.temp10.modifier",
       "default_value": [],
       "field_type": "list",
+      "content_type" : "key_modifiers",
       "macros_on_modify": [
         "_keybind"
       ]
@@ -2354,6 +2374,7 @@
         "Alt"
       ],
       "field_type": "list",
+      "content_type" : "key_modifiers",
       "macros_on_modify": [
         "_keybind"
       ]
@@ -2388,6 +2409,7 @@
         "Alt"
       ],
       "field_type": "list",
+      "content_type" : "key_modifiers",
       "macros_on_modify": [
         "_keybind"
       ]
@@ -2422,6 +2444,7 @@
         "Alt"
       ],
       "field_type": "list",
+      "content_type" : "key_modifiers",
       "macros_on_modify": [
         "_keybind"
       ]
@@ -2456,6 +2479,7 @@
         "Alt"
       ],
       "field_type": "list",
+      "content_type" : "key_modifiers",
       "macros_on_modify": [
         "_keybind"
       ]
@@ -2490,6 +2514,7 @@
         "Control"
       ],
       "field_type": "list",
+      "content_type" : "key_modifiers",
       "macros_on_modify": [
         "_keybind"
       ]
@@ -2524,6 +2549,7 @@
         "Control"
       ],
       "field_type": "list",
+      "content_type" : "key_modifiers",
       "macros_on_modify": [
         "_keybind"
       ]
@@ -2558,6 +2584,7 @@
         "Control"
       ],
       "field_type": "list",
+      "content_type" : "key_modifiers",
       "macros_on_modify": [
         "_keybind"
       ]
@@ -2590,6 +2617,7 @@
       "name": "scripts.keybind.configuration.walk_mode.modifier",
       "default_value": [],
       "field_type": "list",
+      "content_type" : "key_modifiers",
       "macros_on_modify": [
         "_keybind"
       ]
